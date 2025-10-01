@@ -1,12 +1,10 @@
 public class Reference
 {
-    // Private fields (encapsulation: hide data)
     private string _book;
     private int _chapter;
     private int _verse;
-    private int _endVerse; // -1 means "no range"
+    private int _endVerse; // -1 means single verse
 
-    // Constructor: single verse
     public Reference(string book, int chapter, int verse)
     {
         _book = book;
@@ -15,7 +13,6 @@ public class Reference
         _endVerse = -1;
     }
 
-    // Constructor: verse range (start to end)
     public Reference(string book, int chapter, int startVerse, int endVerse)
     {
         _book = book;
@@ -24,7 +21,6 @@ public class Reference
         _endVerse = endVerse;
     }
 
-    // Displays "Book Chapter:Verse" or "Book Chapter:Start-End"
     public string GetDisplayText()
     {
         if (_endVerse > 0 && _endVerse != _verse)
