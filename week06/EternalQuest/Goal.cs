@@ -16,7 +16,7 @@ public abstract class Goal
 
     public string GetName() => _shortName;
 
-    /// Helper to expose the base point value (used by the manager for UI only).
+    /// Helper to expose the base point value
     public int GetBasePoints() => _points;
 
     /// Default details string; derived classes may add more info.
